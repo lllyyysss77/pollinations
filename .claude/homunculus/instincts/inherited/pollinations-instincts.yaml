@@ -1,0 +1,539 @@
+# Instincts generated from https://github.com/lllyyysss77/pollinations
+# Generated: 2026-05-12T20:56:58.953Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: pollinations-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Commit Length
+
+## Action
+
+Keep commit messages concise (~45 characters)
+
+## Evidence
+
+- Average commit message length: 45 chars
+- Based on 100 commits
+
+---
+id: pollinations-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: pollinations-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: pollinations-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: pollinations-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: pollinations-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: pollinations-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: no
+
+---
+id: pollinations-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~27x per month
+- Files: enter.pollinations.ai/src/client/components/pricing/*, enter.pollinations.ai/src/routes/*, enter.pollinations.ai/test/integration/*
+
+---
+id: pollinations-workflow-add-new-app-to-catalog
+trigger: "when doing add new app to catalog"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Workflow Add New App To Catalog
+
+## Action
+
+Follow the add-new-app-to-catalog workflow:
+1. Edit README.md to mention the new app.
+2. Edit apps/APPS.md to add the new app entry.
+3. Optionally update enter.pollinations.ai/package-lock.json if dependencies are involved.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~12x per month
+- Files: README.md, apps/APPS.md, enter.pollinations.ai/package-lock.json
+
+---
+id: pollinations-workflow-add-or-update-github-workflow
+trigger: "when doing add or update github workflow"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Workflow Add Or Update Github Workflow
+
+## Action
+
+Follow the add-or-update-github-workflow workflow:
+1. Create or modify a file in .github/workflows/.
+2. Commit the workflow file with a descriptive message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .github/workflows/*.yml
+
+---
+id: pollinations-workflow-feature-development-with-api-and-docs
+trigger: "when doing feature development with api and docs"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Workflow Feature Development With Api And Docs
+
+## Action
+
+Follow the feature-development-with-api-and-docs workflow:
+1. Edit or add API route files (e.g., enter.pollinations.ai/src/routes/).
+2. Update shared registries (e.g., shared/registry/).
+3. Update or add integration tests.
+4. Update documentation (e.g., APIDOCS.md, client components, pricing data).
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: enter.pollinations.ai/src/routes/*.ts, shared/registry/*.ts, enter.pollinations.ai/test/integration/*.test.ts
+
+---
+id: pollinations-workflow-merge-main-into-feature-branch
+trigger: "when doing merge main into feature branch"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/pollinations
+---
+
+# Pollinations Workflow Merge Main Into Feature Branch
+
+## Action
+
+Follow the merge-main-into-feature-branch workflow:
+1. Merge main into the feature branch.
+2. Resolve conflicts across various files and directories.
+3. Commit all updated files, including workflows, documentation, scripts, and source code.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .github/workflows/*.yml, README.md, apps/*
+
+---
+id: pollinations-instinct-filename-camelcase
+trigger: "When creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Filename Camelcase
+
+## Action
+
+Name the file using camelCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- Observed in multiple source files
+
+---
+id: pollinations-instinct-function-camelcase
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Function Camelcase
+
+## Action
+
+Use camelCase for the function name
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: pollinations-instinct-class-pascalcase
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Class Pascalcase
+
+## Action
+
+Use PascalCase for the class name
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: pollinations-instinct-constant-screaming-snake-case
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Constant Screaming Snake Case
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: pollinations-instinct-import-relative
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Import Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: pollinations-instinct-export-mixed
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Export Mixed
+
+## Action
+
+Use both named and default exports as appropriate
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: pollinations-instinct-test-file-pattern
+trigger: "When creating a test file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Test File Pattern
+
+## Action
+
+Name the file with the pattern *.test.ts
+
+## Evidence
+
+- Pattern in testing.filePattern
+
+---
+id: pollinations-instinct-test-types
+trigger: "When writing tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Test Types
+
+## Action
+
+Include both unit and integration tests where applicable
+
+## Evidence
+
+- Pattern in testing.testTypes
+- Files in enter.pollinations.ai/test/integration/*
+
+---
+id: pollinations-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Commit Prefix
+
+## Action
+
+Prefix the message with feat:, fix:, or docs: as appropriate
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Seen in commit 'feat: add elevenmusic model with duration-based billing (#8072)'
+
+---
+id: pollinations-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 45 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: pollinations-instinct-add-new-app-to-catalog
+trigger: "When someone wants to add a new app to the platform's catalog"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Add New App To Catalog
+
+## Action
+
+Edit README.md and apps/APPS.md to mention the new app, and optionally update enter.pollinations.ai/package-lock.json if dependencies are involved
+
+## Evidence
+
+- Workflow 'add-new-app-to-catalog'
+- Files involved: README.md, apps/APPS.md, enter.pollinations.ai/package-lock.json
+
+---
+id: pollinations-instinct-add-or-update-github-workflow
+trigger: "When someone wants to introduce or modify CI/CD or automation workflows"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Add Or Update Github Workflow
+
+## Action
+
+Create or modify a file in .github/workflows/ and commit the workflow file with a descriptive message
+
+## Evidence
+
+- Workflow 'add-or-update-github-workflow'
+- Files involved: .github/workflows/*.yml
+
+---
+id: pollinations-instinct-feature-development-with-api-and-docs
+trigger: "When someone wants to add a new model, endpoint, or major feature to the backend"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Feature Development With Api And Docs
+
+## Action
+
+Edit or add API route files, update shared registries, add or update integration tests, and update documentation
+
+## Evidence
+
+- Workflow 'feature-development-with-api-and-docs'
+- Files involved: enter.pollinations.ai/src/routes/*.ts, shared/registry/*.ts, enter.pollinations.ai/test/integration/*.test.ts, APIDOCS.md, enter.pollinations.ai/src/client/components/pricing/data.ts
+
+---
+id: pollinations-instinct-merge-main-into-feature-branch
+trigger: "When someone wants to sync a feature branch with the latest main branch changes"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/pollinations
+---
+
+# Pollinations Instinct Merge Main Into Feature Branch
+
+## Action
+
+Merge main into the feature branch, resolve conflicts, and commit all updated files including workflows, documentation, scripts, and source code
+
+## Evidence
+
+- Workflow 'merge-main-into-feature-branch'
+- Files involved: .github/workflows/*.yml, README.md, apps/*, enter.pollinations.ai/*, shared/*, social/*, image.pollinations.ai/*, text.pollinations.ai/*, tools/scripts/*
+
